@@ -171,40 +171,6 @@ def SEND_MESSAGE(op):
                         group.preventJoinByTicket = True
                         client.updateGroup(group)
                         sendMessage(msg.to, "URL ditutup, ketik *buka* untuk membuka URL")
-		if msg.text in ["Tag all","Tagall","tagall"]:
-		    group = client.getGroup(msg.to)
-		    nama = [contact.mid for contact in group.members]
-		
-		    cb = ""
-		    cb2 = ""
-		    strt = int(0)
-	            akh = int(0)
-		    for md in nama:
-			akh = akh + int(5)
-			
-			cb +="""{"S":"""+json
-		
-		dumps(str(strt))+""","E":"""+json
-		
-		dumps(str(akh))+""","M":"""+json
-		
-		dumps(md)+"},"""
-		
-		        start = strt + int(6)
-			akh = akh + 1
-			cb2 += "@nrik "
-		     
-		     cb = (cb[:int(len(cb)-1)])
-		     msg.contentType = 0
-		     msg.text = cb2
-		     msg.contentMetadata
-		={'MENTION':'{"MENTIONEES":
-		['+cb+']}','EMTVER':'4'}
-		
-		     try:
-		         client.sendMessage(msg)
-		     except Exception as error :
-			 print error
                 if "kick:" in msg.text:
                     key = msg.text[5:]
                     client.kickoutFromGroup(msg.to, [key])
