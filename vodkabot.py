@@ -177,7 +177,7 @@ def SEND_MESSAGE(op):
                     contact = client.getContact(key)
                     sendMessage(msg.to, ""+contact.displayName+"maapin bang :v")
 		if msg.text in ["Sp","Speed","speed"
-		    start = time.time () - start
+		    strt = time.time () - start
 		    elapsed_time = time.time () - start
 		    sendText(msg.to,"%seconds" % (elapsed_time))
                 if "nk:" in msg.text:
