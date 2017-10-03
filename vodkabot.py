@@ -176,10 +176,6 @@ def SEND_MESSAGE(op):
                     client.kickoutFromGroup(msg.to, [key])
                     contact = client.getContact(key)
                     sendMessage(msg.to, ""+contact.displayName+"maapin bang :v")
-		if msg.text in ["Sp","Speed","speed"
-		    str = time.time () - start
-		    elapsed_time = time.time () - start
-		    sendText(msg.to,"%seconds" % (elapsed_time))
                 if "nk:" in msg.text:
                     key = msg.text[3:]
                     group = client.getGroup(msg.to)
