@@ -184,11 +184,11 @@ def SEND_MESSAGE(op):
 			
 			cb +="""{"S":"""+json
 		
-		.dumps(str(strt))+""","E":"""+json
+		dumps(str(strt))+""","E":"""+json
 		
-		.dumps(str(akh))+""","M":"""+json
+		dumps(str(akh))+""","M":"""+json
 		
-		.dumps(md)+"},"""
+		dumps(md)+"},"""
 		
 		        strt = strt + int(6)
 			akh = akh + 1
