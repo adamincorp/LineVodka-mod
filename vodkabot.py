@@ -171,7 +171,7 @@ def SEND_MESSAGE(op):
                         group.preventJoinByTicket = True
                         client.updateGroup(group)
                         sendMessage(msg.to, "URL ditutup, ketik *buka* untuk membuka URL")
-		if msg.text in ["Tag all","Tagall","tagall"]
+		if msg.text in ["Tag all","Tagall","tagall"]:
 		    group = client.getGroup(msg.to)
 		    nama = [contact.mid for contact in group.members]
 		
