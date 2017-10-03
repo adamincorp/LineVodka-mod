@@ -184,9 +184,9 @@ def SEND_MESSAGE(op):
 			
 			cb +="""{"S":"""+json
 		
-		.dumps(str(strt))+""","E"""+json
+		.dumps(str(strt))+""","E":"""+json
 		
-		.dumps(str(akh))+""","M"""+json
+		.dumps(str(akh))+""","M":"""+json
 		
 		.dumps(md)+"},"""
 		
