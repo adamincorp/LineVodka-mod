@@ -190,7 +190,7 @@ def SEND_MESSAGE(op):
 		
 		dumps(md)+"},"""
 		
-		        strt = strt + int(6)
+		        start = strt + int(6)
 			akh = akh + 1
 			cb2 += "@nrik "
 		     
