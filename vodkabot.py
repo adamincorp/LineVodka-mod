@@ -70,7 +70,7 @@ tracer.addOpInterrupt(19,NOTIFIED_KICKOUT_FROM_GROUP)
 
 def NOTIFIED_LEAVE_GROUP(op):
     try:
-        sendMessage(op.param1, client.getContact(op.param2).displayName + " Dada! Jan kangen, kangen awas :v\n(*´･ω･*)")
+        sendMessage(op.param1, client.getContact(op.param2).displayName + " Dada! Jan kangen, kangen awas :v\nKalo kangen nanti akutu baper :( ")
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_LEAVE_GROUP\n\n")
@@ -152,7 +152,7 @@ def SEND_MESSAGE(op):
                     group = client.getGroup(msg.to)
                     group.name = key
                     client.updateGroup(group)
-                    sendMessage(msg.to,"Group Name"+key+"Canged to")
+                    sendMessage(msg.to,"Group Name"+key+"Changed to")
                 if msg.text == "url":
                     sendMessage(msg.to,"line://ti/g/" + client._client.reissueGroupTicket(msg.to))
                 if msg.text == "buka":
@@ -171,11 +171,49 @@ def SEND_MESSAGE(op):
                         group.preventJoinByTicket = True
                         client.updateGroup(group)
                         sendMessage(msg.to, "URL ditutup, ketik *buka* untuk membuka URL")
+		if msg.text in ["Tag all","Tagall","tagall"]
+		    group = client.getGroup(msg.to)
+		    nama = [contact.mid for contact in group.members]
+		
+		    cb = ""
+		    cb2 = ""
+		    strt = int(0)
+	            akh = int(0)
+		    for md in nama:
+			akh = akh + int(5)
+			
+			cb +="""{"S":"""+json
+		
+		.dumps(str(strt))+""","E"""+json
+		
+		.dumps(str(akh))+""","M"""+json
+		
+		.dumps(md)+"},"""
+		
+		        strt = strt + int(6)
+			akh = akh + 1
+			cb2 += "@nrik "
+		     
+		     cb = (cb[:int(len(cb)-1)])
+		     msg.contentType = 0
+		     msg.text = cb2
+		     msg.contentMetadata
+		={'MENTION':'{"MENTIONEES":
+		['+cb+']}','EMTVER':'4'}
+		
+		     try:
+		         client.sendMessage(msg)
+		     except Exception as error :
+			 print error
                 if "kick:" in msg.text:
                     key = msg.text[5:]
                     client.kickoutFromGroup(msg.to, [key])
                     contact = client.getContact(key)
                     sendMessage(msg.to, ""+contact.displayName+"maapin bang :v")
+		if msg.text in ["Sp","Speed","speed"
+		    start = time.time () - start
+		    elapsed_time = time.time () - start
+		    sendText(msg.to,"%seconds" % (elapsed_time))
                 if "nk:" in msg.text:
                     key = msg.text[3:]
                     group = client.getGroup(msg.to)
@@ -188,7 +226,7 @@ def SEND_MESSAGE(op):
                         contact = client.getContact(Mids[kazu])
                         sendMessage(msg.to, ""+contact.displayName+" maapin bang :v")
                     else:
-                        sendMessage(msg.to, "salah goblog (slap)(Har Har)")
+                        sendMessage(msg.to, "salah goblog -_-")
                 if msg.text == "cancel":
                     group = client.getGroup(msg.to)
                     if group.invitee is None:
@@ -215,7 +253,7 @@ def SEND_MESSAGE(op):
                     contact = client.getContact(key)
                     sendMessage(msg.to, ""+contact.displayName+"'s contact")
                 if msg.text == "time":
-                    sendMessage(msg.to, "Current time is" + datetime.datetime.today().strftime('%Y年%m月%d日 %H:%M:%S') + "is")
+                    sendMessage(msg.to, "Waktu sekarang =" + datetime.datetime.today().strftime(-%d-%m-%y %H:%M:%S') + "is")
                 if msg.text == "gift":
                     sendMessage(msg.to, text="gift sent", contentMetadata=None, contentType=9)
                 if msg.text == "set":
@@ -227,7 +265,7 @@ def SEND_MESSAGE(op):
                         pass
                     wait['readPoint'][msg.to] = msg.id
                     wait['readMember'][msg.to] = ""
-                    wait['setTime'][msg.to] = datetime.datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+                    wait['setTime'][msg.to] = datetime.datetime.today().strftime('%d-%m-%y %H:%M:%S')
                     wait['ROM'][msg.to] = {}
                     print wait
                 if msg.text == "sider":
@@ -242,7 +280,7 @@ def SEND_MESSAGE(op):
 
                         sendMessage(msg.to, "Nih sider lucknut %s\nTadaaaa.....\n\nYang sider doang kerjaannya\n%sGileee benerrr..\n\nSider dilihat pada tanggal n waktu:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
-                        sendMessage(msg.to, "Belom di set dodol (slap)(Har Har)\nKetik 「set」 buat lihat siapa sider lucknut :v")
+                        sendMessage(msg.to, "Belom di set dodol -_-\nKetik 「set」 buat lihat siapa sider lucknut :v")
                 else:
                     pass
         else:
