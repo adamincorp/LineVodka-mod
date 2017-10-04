@@ -238,9 +238,9 @@ def SEND_MESSAGE(op):
                                 sendText(msg.to,"error")
 		if msg.text in ["Key","help","Help"]:
                     if wait["lang"] == "JP":
-                    	sendText(msg.to,helpMessage)
+                    	sendMessage(msg.to,helpMessage)
                     else:
-                    	sendText(msg.to,helpt)
+                    	sendMessage(msg.to,helpt)
 		if msg.text == "speed":
                     start = time.time()
                     sendMessage(msg.to, "Processing...")
