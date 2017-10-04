@@ -207,7 +207,7 @@ def SEND_MESSAGE(op):
                         contact = client.getContact(Mids[kazu])
                         sendMessage(msg.to, ""+contact.displayName+" maapin bang :v")
                     else:
-                        sendMessage(msg.to, "salah goblog 􀨁􀄻slap􏿿􀜁􀅔Har Har􏿿")
+                        sendMessage(msg.to, "salah goblog 􏿿􀜁􀅔Har Har􏿿")
                 if msg.text == "cancel":
                     group = client.getGroup(msg.to)
                     if group.invitee is None:
@@ -290,9 +290,9 @@ def SEND_MESSAGE(op):
                                 print rom
                                 chiya += rom[1] + "\n"
 
-                        sendMessage(msg.to, "Nih sider lucknut %s\nTadaaaa.....\n\nYang sider doang kerjaannya\n%sGileee benerrr..\n\nSider dilihat pada tanggal n waktu:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
+                        sendMessage(msg.to, "Nih sider lucknut %s\nTadaaaa.....\n\nYang sider doang kerjaannya\n%sGileee benerrr..\n\nSider dilihat pada tanggal dan waktu:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
-                        sendMessage(msg.to, "Belom di set dodol 􀨁􀄻Flip􏿿􀜁􀅔Har Har􏿿\nKetik 「set」 buat lihat siapa sider lucknut :v")
+                        sendMessage(msg.to, "Belom di set dodol 􏿿􀜁􀅔Har Har􏿿\nKetik 「set」 buat lihat siapa sider lucknut :v")
                 else:
                     pass
         else:
