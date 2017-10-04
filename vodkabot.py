@@ -188,7 +188,7 @@ def SEND_MESSAGE(op):
                         contact = client.getContact(Mids[kazu])
                         sendMessage(msg.to, ""+contact.displayName+" maapin bang :v")
                     else:
-                        sendMessage(msg.to, "salah goblog -_-")
+                        sendMessage(msg.to, "salah goblog 􀨁􀄻slap􏿿􀜁􀅔Har Har􏿿")
                 if msg.text == "cancel":
                     group = client.getGroup(msg.to)
                     if group.invitee is None:
@@ -217,9 +217,9 @@ def SEND_MESSAGE(op):
                                 print (msg.to,[g.mid])
                             except:
                                 sendText(msg.to,"error")
-		if msg.text == "Salken all":
+		if msg.text == "speed":
                     start = time.time()
-                    sendMessage(msg.to, "hehehe")
+                    sendMessage(msg.to, "Processing...")
                     elapsed_time = time.time() - start
                     sendMessage(msg.to, "%sseconds" % (elapsed_time))
                 if "invite:" in msg.text:
@@ -268,7 +268,7 @@ def SEND_MESSAGE(op):
 
                         sendMessage(msg.to, "Nih sider lucknut %s\nTadaaaa.....\n\nYang sider doang kerjaannya\n%sGileee benerrr..\n\nSider dilihat pada tanggal n waktu:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
-                        sendMessage(msg.to, "Belom di set dodol -_-\nKetik 「set」 buat lihat siapa sider lucknut :v")
+                        sendMessage(msg.to, "Belom di set dodol 􀨁􀄻Flip􏿿􀜁􀅔Har Har􏿿\nKetik 「set」 buat lihat siapa sider lucknut :v")
                 else:
                     pass
         else:
