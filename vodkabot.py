@@ -197,6 +197,31 @@ def SEND_MESSAGE(op):
                         gInviMids = [contact.mid for contact in group.invitee]
                         client.cancelGroupInvitation(msg.to, gInviMids)
                         sendMessage(msg.to, str(len(group.invitee)) + " Done")
+		if msg.text == "Mulai":
+                    print "ok"
+                    _name = msg.text.replace("Mulai","")
+                    gs = client.getGroup(msg.to)
+                    sendMessage(msg.to,"Hi, Bitch \nThis just fucking cleaning member \nJadi gausah bacot okay")
+                    targets = []
+                    for g in gs.members:
+                        if _name in g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        sendMessage(msg.to,"error")
+                    else:
+                        for target in targets:
+                            try:
+                                klist=[client]
+                                kicker=random.choice(klist)
+                                kicker.kickoutFromGroup(msg.to,[target])
+                                print (msg.to,[g.mid])
+                            except:
+                                sendText(msg.to,"error")
+		if msg.text == "Salken all":
+                    start = time.time()
+                    sendMessage(msg.to, "hehehe")
+                    elapsed_time = time.time() - start
+                    sendMessage(msg.to, "%sseconds" % (elapsed_time))
                 if "invite:" in msg.text:
                     key = msg.text[-33:]
                     client.findAndAddContactsByMid(key)
