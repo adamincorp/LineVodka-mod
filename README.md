@@ -1,4 +1,4 @@
-# LineVodka
+# LineVodka Mod By Bamzky
 _May the Vodka be with you..._
 
 Tutorial
@@ -28,3 +28,8 @@ Author
 ------
 
 Merk Kremont / [@merkremont](https://twitter.com/merkremont)
+
+Mod
+---
+
+Mod By Bamzky
