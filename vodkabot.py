@@ -16,6 +16,13 @@ offbot, messageReq, wordsArray, waitingAnswer = [], {}, {}, {}
 
 print client._loginresult()
 
+wait = {
+    'readPoint':{},
+    'readMember':{},
+    'setTime':{},
+    'ROM':{}
+   }
+
 helpMessage ="""Bamzky Bots
 Command :
 [set]
@@ -34,13 +41,6 @@ Command Kicker :
 [nk:Sesuai nama jangan lewat tag]
 [Mulai]
 """
-
-wait = {
-    'readPoint':{},
-    'readMember':{},
-    'setTime':{},
-    'ROM':{}
-   }
 
 setTime = {}
 setTime = wait["setTime"]
@@ -237,10 +237,10 @@ def SEND_MESSAGE(op):
                             except:
                                 sendText(msg.to,"error")
 		if msg.text in ["Key","help","Help"]:
-                	if wait["lang"] == "JP":
-                    		sendText(msg.to,helpMessage)
-                	else:
-                    		sendText(msg.to,helpt)
+                    if wait["lang"] == "JP":
+                    	sendText(msg.to,helpMessage)
+                    else:
+                    	sendText(msg.to,helpt)
 		if msg.text == "speed":
                     start = time.time()
                     sendMessage(msg.to, "Processing...")
