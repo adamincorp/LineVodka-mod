@@ -137,6 +137,12 @@ def RECEIVE_MESSAGE(op):
 
 tracer.addOpInterrupt(26, RECEIVE_MESSAGE)
 
+if op.type == 17: 
+            if op.param2 in Bots: 
+                return 
+            sendText(op.param1, "Welcome, cek note yaa\n(*´･ω･*)") 
+            print "MEMBER HAS JOIN THE GROUP"
+
 def SEND_MESSAGE(op):
     msg = op.message
     try:
