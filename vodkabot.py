@@ -137,34 +137,6 @@ def RECEIVE_MESSAGE(op):
 
 tracer.addOpInterrupt(26, RECEIVE_MESSAGE)
 
-if msg.text in ["tagall"]:
-
-    group = client.getGroup(msg.to)
-    nama = [contact.mid for contact in group.members]
-
-    cb = ""
-    cb2 = ""
-    strt = int(0)
-    akh = int(0)
-    for md in nama:
-        akh = akh + int(5)
-
-        cb += """{"S":"""+json.dumps(str(strt))+""","E":"""+json.dumps(str(akh))+""","M":"""+json.dumps(md)+"},"""
-
-        strt = strt + int(6)
-        akh = akh + 1
-        cb2 += "@nrik "
-
-    cb = (cb[:int(len(cb)-1)])
-    msg.contentType = 0
-    msg.text = cb2
-    msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+cb+']}','EMTVER':'4'}
-
-    try:
-        client.sendMessage(msg)
-    except Exception as error:
-        print error
-
 def SEND_MESSAGE(op):
     msg = op.message
     try:
@@ -249,7 +221,9 @@ def SEND_MESSAGE(op):
                     print "ok"
                     _name = msg.text.replace("Mulai","")
                     gs = client.getGroup(msg.to)
-                    sendMessage(msg.to,"Hi, Bitch \nThis just fucking cleaning member \nJadi gausah bacot okay")
+                    sendMessage(msg.to,"Hi, B-I-T-C-H")
+		    sendMessage(msg.to,"Just fucking cleaning member")
+		    sendMessage(msg.to,"Jadi gausah bacot anjing")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
